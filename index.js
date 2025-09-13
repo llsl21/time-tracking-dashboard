@@ -2,6 +2,23 @@ const panelDaily = document.getElementById("panel-daily");
 const panelWeekly = document.getElementById("panel-weekly");
 const panelMonthly = document.getElementById("panel-monthly");
 
+const mq = matchMedia("(768px <= width < 1440px)");
+function onChange(e) {
+  const spanTags = document.querySelectorAll(".panel__time > span");
+  if (e.matches) {
+    spanTags.forEach((span) => {
+      const hrs = span.previousSibling;
+      if (hrs.length >= 3) {
+        span.setAttribute("style", "font: var(--text-preset-2)");
+      }
+    });
+  } else {
+    spanTags.forEach((span) => span.removeAttribute("style"));
+  }
+}
+mq.addEventListener("change", onChange);
+onChange(mq);
+
 function appendItem(data) {
   let daily = "",
     weekly = "",
@@ -17,7 +34,9 @@ function appendItem(data) {
               <img src="images/icon-ellipsis.svg" />
             </button>
             <p class="panel__time">${d.current}hrs</p>
-            <p class="panel__previous">Yesterday - ${d.previous}hrs</p>
+            <p class="panel__previous">Yesterday - ${
+              d.previous
+            }<span>hrs</span></p>
           </div></div>`;
 
     weekly += `<div class="panel panel__${title
@@ -28,7 +47,9 @@ function appendItem(data) {
               <img src="images/icon-ellipsis.svg" />
             </button>
             <p class="panel__time">${w.current}hrs</p>
-            <p class="panel__previous">Last Week - ${w.previous}hrs</p>
+            <p class="panel__previous">Last Week - ${
+              w.previous
+            }<span>hrs</span></p>
           </div></div>`;
 
     monthly += `<div class="panel panel__${title
@@ -38,8 +59,10 @@ function appendItem(data) {
             <button class="panel__button">
               <img src="images/icon-ellipsis.svg" />
             </button>
-            <p class="panel__time">${m.current}hrs</p>
-            <p class="panel__previous">Last Month - ${m.previous}hrs</p>
+            <p class="panel__time">${m.current}<span>hrs</span></p>
+            <p class="panel__previous">Last Month - ${
+              m.previous
+            }<span>hrs</span></p>
           </div></div>`;
   });
 

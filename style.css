@@ -215,6 +215,7 @@ section[id^="panel-"]:not([hidden]) {
   color: var(--white);
   grid-area: time;
   justify-self: start;
+  
 }
 
 .panel__previous {
@@ -233,6 +234,7 @@ section[id^="panel-"]:not([hidden]) {
 
   main {
     max-width: calc(612 / 16 * 1rem);
+    flex: 1 0 0;
   }
 
   .report-card__tabs {
@@ -242,7 +244,7 @@ section[id^="panel-"]:not([hidden]) {
 
   section[id^="panel-"]:not([hidden]) {
     gap: calc(24 / 16 * 1rem);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .panel {
@@ -254,8 +256,21 @@ section[id^="panel-"]:not([hidden]) {
       "heading button"
       "time time"
       "previous previous";
+    grid-template-columns: auto 1fr;
     justify-items: start;
     padding: calc(21.5 / 16 * 1rem) calc(25.5 / 16 * 1rem);
+    overflow: hidden;
+  }
+
+  .panel__time {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+ 
+  }
+
+  .panel__previous {
+    white-space: nowrap;
   }
 
   .panel__button {
@@ -332,6 +347,7 @@ section[id^="panel-"]:not([hidden]) {
 
   .panel__time {
     margin-block-start: calc(24 / 16 * 1rem);
+   
   }
 
   .panel__button {
