@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main id="main">
+      <div class="report-card">
+        <header class="report-card__header">
+          <div class="report-card__avatar-img-wrapper">
+            <img src="./images/image-jeremy.png" alt="" />
+          </div>
+          <p class="report-card__eyebrow">Report for</p>
+          <h2 class="report-card__name">Jeremy Robson</h2>
+        </header>
+        <div
+          class="tabs report-card__tabs"
+          role="tablist"
+          aria-label="Reporting period"
+        >
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-daily"
+            id="tab-daily"
+          >
+            Daily
+          </button>
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-weekly"
+            id="tab-weekly"
+          >
+            Weekly
+          </button>
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-monthly"
+            id="tab-monthly"
+          >
+            Monthly
+          </button>
+        </div>
+      </div>
+
+      <section
+        role="tabpanel"
+        id="panel-daily"
+        aria-labelledby="tab-daily"
+        hidden
+      >
+        <!-- <div class="panel panel__work">
+          <div class="panel__content">
+            <h3 class="panel__heading">Work</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">5hrs</p>
+            <p class="panel__previous">Yesterday - 7hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__play">
+          <div class="panel__content">
+            <h3 class="panel__heading">Play</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">1hrs</p>
+            <p class="panel__previous">Yesterday - 2hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__study">
+          <div class="panel__content">
+            <h3 class="panel__heading">Study</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">0hrs</p>
+            <p class="panel__previous">Yesterday - 1hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__exercise">
+          <div class="panel__content">
+            <h3 class="panel__heading">Exercise</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">1hrs</p>
+            <p class="panel__previous">Yesterday - 1hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__social">
+          <div class="panel__content">
+            <h3 class="panel__heading">Social</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">1hrs</p>
+            <p class="panel__previous">Yesterday - 3hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__self-care">
+          <div class="panel__content">
+            <h3 class="panel__heading">Self Care</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">0hrs</p>
+            <p class="panel__previous">Yesterday - 1hrs</p>
+          </div>
+        </div> -->
+      </section>
+      <section role="tabpanel" id="panel-weekly" aria-labelledby="tab-weekly">
+        <!-- <div class="panel panel__work">
+          <div class="panel__content">
+            <h3 class="panel__heading">Work</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">32hrs</p>
+            <p class="panel__previous">Last Week - 36hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__play">
+          <div class="panel__content">
+            <h3 class="panel__heading">Play</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">10hrs</p>
+            <p class="panel__previous">Last Week - 36hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__study">
+          <div class="panel__content">
+            <h3 class="panel__heading">Study</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">4hrs</p>
+            <p class="panel__previous">Last Week - 7hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__exercise">
+          <div class="panel__content">
+            <h3 class="panel__heading">Exercise</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">4hrs</p>
+            <p class="panel__previous">Last Week - 5hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__social">
+          <div class="panel__content">
+            <h3 class="panel__heading">Social</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">5hrs</p>
+            <p class="panel__previous">Last Week - 10hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__self-care">
+          <div class="panel__content">
+            <h3 class="panel__heading">Self Care</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">2hrs</p>
+            <p class="panel__previous">Last Week - 2hrs</p>
+          </div>
+        </div> -->
+      </section>
+      <section
+        role="tabpanel"
+        id="panel-monthly"
+        aria-labelledby="tab-monthly"
+        hidden
+      >
+        <!-- <div class="panel panel__work">
+          <div class="panel__content">
+            <h3 class="panel__heading">Work</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">103hrs</p>
+            <p class="panel__previous">Last Month - 128hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__play">
+          <div class="panel__content">
+            <h3 class="panel__heading">Play</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">23hrs</p>
+            <p class="panel__previous">Last Month - 29hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__study">
+          <div class="panel__content">
+            <h3 class="panel__heading">Study</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">13hrs</p>
+            <p class="panel__previous">Last Month - 19hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__exercise">
+          <div class="panel__content">
+            <h3 class="panel__heading">Exercise</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">11hrs</p>
+            <p class="panel__previous">Last Month - 18hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__social">
+          <div class="panel__content">
+            <h3 class="panel__heading">Social</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">21hrs</p>
+            <p class="panel__previous">Last Month - 23hrs</p>
+          </div>
+        </div>
+        <div class="panel panel__self-care">
+          <div class="panel__content">
+            <h3 class="panel__heading">Self Care</h3>
+            <button class="panel__button">
+              <img src="images/icon-ellipsis.svg" />
+            </button>
+            <p class="panel__time">7hrs</p>
+            <p class="panel__previous">Last Month - 11hrs</p>
+          </div>
+        </div> -->
+      </section>
+    </main>
+  </body>
+</html>
