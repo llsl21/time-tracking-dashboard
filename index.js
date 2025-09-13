@@ -10,7 +10,7 @@ function appendItem(data) {
   data.forEach(({ title, timeframes: { daily: d, weekly: w, monthly: m } }) => {
     daily += `<div class="panel panel__${title
       .toLowerCase()
-      .replace(/\s+/, "-")}">
+      .replace(/\s+/g, "-")}">
     <div class="panel__content">
             <h3 class="panel__heading">${title}</h3>
             <button class="panel__button">
@@ -22,7 +22,7 @@ function appendItem(data) {
 
     weekly += `<div class="panel panel__${title
       .toLowerCase()
-      .replace(/\s+/, "-")}"><div class="panel__content">
+      .replace(/\s+/g, "-")}"><div class="panel__content">
             <h3 class="panel__heading">${title}</h3>
             <button class="panel__button">
               <img src="images/icon-ellipsis.svg" />
@@ -33,7 +33,7 @@ function appendItem(data) {
 
     monthly += `<div class="panel panel__${title
       .toLowerCase()
-      .replace(/\s+/, "-")}"><div class="panel__content">
+      .replace(/\s+/g, "-")}"><div class="panel__content">
             <h3 class="panel__heading">${title}</h3>
             <button class="panel__button">
               <img src="images/icon-ellipsis.svg" />
