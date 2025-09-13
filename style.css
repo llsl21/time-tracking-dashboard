@@ -28,8 +28,8 @@
   --text-preset-5-medium: normal 500 calc(18 / 16 * 1rem) / calc(21 / 16 * 1rem)
       "Rubik",
     sans-serif;
-  --text-preset-5-regular: normal 400 calc(18 / 16 * 1re) / calc(21 / 16 * 1rem)
-      "Rubik",
+  --text-preset-5-regular: normal 400 calc(18 / 16 * 1rem) /
+      calc(21 / 16 * 1rem) "Rubik",
     sans-serif;
   --text-preset-6: normal 400 calc(15 / 16 * 1rem) / calc(18 / 16 * 1rem)
       "Rubik",
